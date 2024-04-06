@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the implementation of a deep-learning model for shadow removal using Deformable Convolution. The model is implemented in PyTorch.
+This repository contains the Pytorch code for a deep-learning model for shadow removal using Deformable Convolution.
 
 ## Architecture
 This is the Block Diagram of the Architecture used for Deshadowing
@@ -65,7 +65,7 @@ scheduler, and other parameters. It iterates over the specified number of epochs
 
 - **Training Loop**: The function iterates over each epoch and performs training and validation phases.
    In the training phase,it sets the model to training mode (`model.train()`) and updates the model parameters based on computed gradients.
-   In the Testing phase,it sets the model to evaluation mode (`model.eval()`) and evaluates the model's performance on the Testing dataset without updating parameters.
+   In the Testing phase, it sets the model to evaluation mode (`model.eval()`) and evaluates the model's performance on the Testing dataset without updating parameters.
 
 - **Loss Computation**: The function computes the loss for each batch using the specified loss functions (`criterion_l1` and `criterion_robustloss`)
     and aggregates the loss over all batches in an epoch.
@@ -77,12 +77,12 @@ scheduler, and other parameters. It iterates over the specified number of epochs
 
 ## Main (main.py)
 
-The `main.py` script serves as the entry point for training a shadow removal model for differen datasets.
+The `main.py` script serves as the entry point for training a shadow removal model for different datasets.
 It includes functionalities for configuring the training process, loading data, initializing the model, defining loss functions, 
 setting up the optimizer, and training the model.
 
 Modify the configuration parameters in the `main.py` script according to your requirements,
-such as batch size, number of epochs, optimizer settings, learning rate scheduler etc.
+such as batch size, number of epochs, optimizer settings, learning rate scheduler, etc.
 
 
 ## Experimental setup
@@ -113,12 +113,12 @@ such as batch size, number of epochs, optimizer settings, learning rate schedule
     ```bash
     cd Image-Deshadowing-Using-Deformable-Convolution-main
     ```
-4. Create foldes with names:
+4. Create folders with names:
     ```bash
     generated_images
     checkpoints
     ```
-5. To train and test the model on your dataset ,run Main.py and modify the path in the train.py:
+5. To train and test the model on your dataset,run Main.py and modify the path in the train.py:
     ```bash
     python Main.py
     ```
